@@ -1,0 +1,42 @@
+$title: #303030;
+$text: #000;
+
+%futura-300{
+  font-family: 'FuturaPT-Light', sans-serif;
+  font-weight: 300;
+}
+
+%futura-book {
+  font-family: 'FuturaPT-Book', sans-serif;
+  font-weight: 400;
+}
+
+%futura-400 {
+  font-family: 'FuturaPT-Demi', sans-serif;
+  font-weight: 400;
+}
+
+%futura-500{
+  font-family: 'FuturaPT-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%futura-700{
+  font-family: 'FuturaPT-Bold', sans-serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+ @return m#{i}n(#{$numbers});
+}
+
+// %radio-hidden{
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   position: absolute;
+// }
