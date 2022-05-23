@@ -746,6 +746,15 @@
     &__popular-title h4{
       font-size: 22px;
     }
+    &__popular-video a{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    &__popular-video a::before{
+      // top: 60px;
+      // transform: translate(-50%, -60%);
+    }
   }
   .post{
     .ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item{
@@ -758,11 +767,27 @@
       padding-bottom: 60px;
       margin-bottom: 30px;
     }
+    &__slider-item--video a{
+      display: inline-block;
+      position: static;
+    }
     &__social{
       margin-bottom: 30px;
     }
     &__social-text{
+      font-family: 'FuturaPT-Light', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+
       margin-bottom: 15px;
+    }
+    &__date{
+      font-family: 'FuturaPT-Light', sans-serif;
+      font-weight: 300;
+    }
+    &__date span{
+      display: inline-block;
+      margin-right: 5px;
     }
   }
 }
