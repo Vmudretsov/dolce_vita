@@ -92,6 +92,29 @@
       margin-bottom: 70px;
     }
   }
+  .content{
+    &__main-link span{
+      top: 20px;
+      font-size: 24px;
+    }
+    &__main-link h3{
+      font-size: 50px;
+      max-width: 260px;
+      top: 20px;
+    }
+    &__main-link p{
+      bottom: 20px;
+      font-size: 22px;
+      max-width: 280px;
+      margin-bottom: 0;
+    }
+    &__main-link button{
+      bottom: 20px;
+      max-width: 180px;
+      height: 60px;
+      font-size: 16px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -478,6 +501,35 @@
       font-size: 17px;
     }
   }
+  .content{
+    &__text{
+      margin-bottom: 10px;
+    }
+    &__main-link span {
+      top: 20px;
+      font-size: 18px;
+      max-width: 100px;
+      right: 20px;
+    }
+    &__main-link h3 {
+      font-size: 35px;
+      max-width: 260px;
+      top: 20px;
+      left: 20px;
+      max-width: 165px;
+    }
+    &__main-link p {
+      font-size: 16px;
+      max-width: 220px;
+      left: 20px;
+    }
+    &__main-link button {
+      max-width: 140px;
+      height: 50px;
+      font-size: 14px;
+      right: 20px;
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -788,6 +840,75 @@
     &__date span{
       display: inline-block;
       margin-right: 5px;
+    }
+  }
+  .content{
+    padding-bottom: 40px;
+    &__title{
+      margin-bottom: 40px;
+    }
+    &__title h2{
+      max-width: 280px;
+    }
+    &__title h2 span{
+      display: none;
+    }
+    &__video-box{
+      position: relative;
+    }
+    &__video-box a{
+      position: static;
+      display: inline-block;
+    }
+    .swiper-navigation-content,
+    .swiper-navigation-vertical{
+      max-width: 100%;
+    }
+    &__text-row:not(:last-child){
+      margin-bottom: 25px;
+    }
+    &__text-block p{
+      padding-right: 0;
+    }
+    &__main-slider{
+      padding: 0 0 10px;
+    }
+    &__text-row--styles p em{
+      font-family: 'FuturaPT-Light', sans-serif;
+      font-weight: 300;
+    }
+    .swiper-pagination-bullet + .swiper-pagination-bullet{
+      margin-left: 10px;
+    }
+    .swiper-pagination-bullet{
+      width: 60px;
+      height: 2px;
+    }
+    &__main-link span {
+      top: 10px;
+      font-size: 12px;
+      max-width: 90px;
+      right: 10px;
+    }
+    &__main-link h3 {
+      font-size: 20px;
+      top: 10px;
+      left: 10px;
+      max-width: 125px;
+    }
+    &__main-link p {
+      font-size: 12px;
+      max-width: 190px;
+      line-height: 1.2;
+      left: 10px;
+      bottom: 10px;
+    }
+    &__main-link button {
+      max-width: 80px;
+      height: 25px;
+      font-size: 9px;
+      right: 10px;
+      bottom: 10px;
     }
   }
 }

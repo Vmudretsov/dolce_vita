@@ -110,6 +110,94 @@ $(function() {
     },
   });
 
+  new Swiper('.content__main-slider', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    // breakpoints: {
+    //   1200: {
+    //     slidesPerView: 1,
+    //   },
+    //   800: {
+    //     slidesPerView: 1,
+    //   },
+    //   100: {
+    //     slidesPerView: 1,
+    //     effect: 'fade',
+    //   },
+    // },
+    navigation: {
+      nextEl: '.swiper-main-content-next',
+      prevEl: '.swiper-main-content-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination-content',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+
+  new Swiper('.content__slider-vertical', {
+    slidesPerView: 1,
+    // spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+        // spaceBetween: 30,
+      },
+      800: {
+        slidesPerView: 1,
+        // spaceBetween: 30,
+      },
+      650: {
+        slidesPerView: 1,
+        // spaceBetween: 30,
+      },
+      100: {
+        slidesPerView: 1,
+        // spaceBetween: 10,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-vertical-next',
+      prevEl: '.swiper-vertical-prev',
+    },
+  });
+
+  new Swiper('.content__slider', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-content-next',
+      prevEl: '.swiper-content-prev',
+    },
+  });
+
   new Swiper('.post__slider', {
     slidesPerView: 1,
     // effect: 'fade',
