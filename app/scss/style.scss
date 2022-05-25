@@ -1842,11 +1842,266 @@
   }
 }
 
+.school {
+  padding-bottom: 35px;
+  &__title {
+    margin-bottom: 80px;
+  }
 
+  &__title h2 {
+    max-width: 100%;
+  }
 
+  &__row-about {
+    margin-bottom: 40px;
+  }
 
+  &__text h3{
+    margin-bottom: 5px;
+  }
+
+  &__text p{
+    padding-right: 0;
+  }
+
+  &__image-box {
+    max-width: 760px;
+    background-color: #e9e9e9;
+    overflow: hidden;
+  }
+
+  &__image-box img {
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px 0;
+    margin-left: auto;
+    transition: transform 500ms ease;
+  }
+
+  &__image{
+    // overflow: hidden;
+  }
+
+  &__image-box img:hover{
+    transform: scale(1.05);
+  }
+
+  &__text-block {
+    margin-bottom: 40px;
+  }
+
+  &__image-box--video{
+    background-color: transparent   
+  }
+
+  &__text-castings{
+    max-width: 440px;
+  }
+
+  &__text-castings strong{
+    display: block;
+    @extend %futura-700;
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 10px;  
+  }
+
+  &__text-castings ul{
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__text-castings ul li{
+    @extend %futura-300;
+    font-size: 17px;
+    color: #000;
+  }
+
+  &__text-row--education:not(:last-child){
+    margin-bottom: 0;
+  }
+
+  &__text-btn{
+    padding-bottom: 30px;
+  }
+
+  &__btn{
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background-color: transparent;
+    @extend %futura-300;
+    font-size: 20px;
+    color: #000;
+
+  }
+
+  &__row--vertical strong{
+    display: block;
+    @extend %futura-700;
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  &__row--vertical p:last-of-type a{
+    border-bottom: 1px solid #000;
+    transition: border-bottom-color 500ms ease;
+  }
+
+  &__row--vertical p:last-of-type a:hover{
+    border-bottom-color: transparent;
+  }
+
+  // &__phone{
+  //   border-bottom: 1px solid transparent;
+  //   transition: border-bottom-color 500ms ease;
+  // }
+
+  .swiper-school--first-prev,
+  .swiper-school--first-next,
+  .swiper-school--second-prev,
+  .swiper-school--second-next,
+  .swiper-school--third-prev,
+  .swiper-school--third-next,
+  .swiper-school--fourth-prev,
+  .swiper-school--fourth-next,
+  .swiper-school--fifth-prev,
+  .swiper-school--fifth-next,
+  .swiper-school--sixth-prev,
+  .swiper-school--sixth-next {
+    border-right: 1px solid transparent;
+    padding: 20px 20px 20px 0;
+    transition: border-color 500ms ease;
+    position: relative;
+  }
+
+  .swiper-school--first-prev,
+  .swiper-school--second-prev,
+  .swiper-school--third-prev,
+  .swiper-school--fourth-prev,
+  .swiper-school--fifth-prev,
+  .swiper-school--sixth-prev {
+    border-left: 1px solid transparent;
+    border-right: none;
+    padding: 20px 0 20px 20px;
+  }
+
+  .swiper-school--first-prev:hover,
+  .swiper-school--first-next:hover,
+  .swiper-school--second-prev:hover,
+  .swiper-school--second-next:hover,
+  .swiper-school--third-prev:hover,
+  .swiper-school--third-next:hover,
+  .swiper-school--fourth-prev:hover,
+  .swiper-school--fourth-next:hover,
+  .swiper-school--fifth-prev:hover,
+  .swiper-school--fifth-next:hover,
+  .swiper-school--sixth-prev:hover,
+  .swiper-school--sixth-next:hover {
+    border-color: #000;
+  }
+
+  .swiper-school--first-prev::before,
+  .swiper-school--first-prev::after,
+  .swiper-school--first-next::before,
+  .swiper-school--first-next::after,
+  .swiper-school--second-prev::before,
+  .swiper-school--second-prev::after,
+  .swiper-school--second-next::before,
+  .swiper-school--second-next::after,
+  .swiper-school--third-prev::before,
+  .swiper-school--third-prev::after,
+  .swiper-school--third-next::before,
+  .swiper-school--third-next::after,
+  .swiper-school--fourth-prev::before,
+  .swiper-school--fourth-prev::after,
+  .swiper-school--fourth-next::before,
+  .swiper-school--fourth-next::after,
+  .swiper-school--fifth-prev::before,
+  .swiper-school--fifth-prev::after,
+  .swiper-school--fifth-next::before,
+  .swiper-school--fifth-next::after,
+  .swiper-school--sixth-prev::before,
+  .swiper-school--sixth-prev::after,
+  .swiper-school--sixth-next::before,
+  .swiper-school--sixth-next::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    background-color: #000;
+    width: 50%;
+    height: 1px;
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .swiper-school--first-prev::after,
+  .swiper-school--first-next::after,
+  .swiper-school--second-prev::after,
+  .swiper-school--second-next::after,
+  .swiper-school--third-prev::after,
+  .swiper-school--third-next::after,
+  .swiper-school--fourth-prev::after,
+  .swiper-school--fourth-next::after,
+  .swiper-school--fifth-prev::after,
+  .swiper-school--fifth-next::after,
+  .swiper-school--sixth-prev::after,
+  .swiper-school--sixth-next::after {
+    top: 0px;
+  }
+
+  .swiper-school--first-prev::after,
+  .swiper-school--first-prev::before,
+  .swiper-school--second-prev::after,
+  .swiper-school--second-prev::before,
+  .swiper-school--third-prev::after,
+  .swiper-school--third-prev::before,
+  .swiper-school--fourth-prev::after,
+  .swiper-school--fourth-prev::before,
+  .swiper-school--fifth-prev::after,
+  .swiper-school--fifth-prev::before,
+  .swiper-school--sixth-prev::after,
+  .swiper-school--sixth-prev::before {
+    left: -1px;
+  }
+
+  .swiper-school--first-prev:hover::before,
+  .swiper-school--first-prev:hover::after,
+  .swiper-school--first-next:hover::before,
+  .swiper-school--first-next:hover::after,
+  .swiper-school--second-prev:hover::before,
+  .swiper-school--second-prev:hover::after,
+  .swiper-school--second-next:hover::before,
+  .swiper-school--second-next:hover::after,
+  .swiper-school--third-prev:hover::before,
+  .swiper-school--third-prev:hover::after,
+  .swiper-school--third-next:hover::before,
+  .swiper-school--third-next:hover::after,
+  .swiper-school--fourth-prev:hover::before,
+  .swiper-school--fourth-prev:hover::after,
+  .swiper-school--fourth-next:hover::before,
+  .swiper-school--fourth-next:hover::after,
+  .swiper-school--fifth-prev:hover::before,
+  .swiper-school--fifth-prev:hover::after,
+  .swiper-school--fifth-next:hover::before,
+  .swiper-school--fifth-next:hover::after,
+  .swiper-school--sixth-prev:hover::before,
+  .swiper-school--sixth-prev:hover::after,
+  .swiper-school--sixth-next:hover::before,
+  .swiper-school--sixth-next:hover::after {
+    opacity: 1;
+  }
+}
 
 
 
 
 @import 'media';
+
+
+
+

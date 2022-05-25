@@ -140,6 +140,168 @@ $(function() {
     },
   });
 
+  new Swiper('.school__slider--sixth', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 4500,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--sixth-next',
+      prevEl: '.swiper-school--sixth-prev',
+    },
+  });
+
+  new Swiper('.school__slider--fifth', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--fifth-next',
+      prevEl: '.swiper-school--fifth-prev',
+    },
+  });
+
+  new Swiper('.school__slider--fourth', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 4500,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--fourth-next',
+      prevEl: '.swiper-school--fourth-prev',
+    },
+  });
+
+  new Swiper('.school__slider--third', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--third-next',
+      prevEl: '.swiper-school--third-prev',
+    },
+  });
+
+  new Swiper('.school__slider--second', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 4500,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--second-next',
+      prevEl: '.swiper-school--second-prev',
+    },
+  });
+
+  new Swiper('.school__slider--first', {
+    slidesPerView: 1,
+    // effect: 'fade',
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 1,
+      },
+      800: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 1,
+      },
+      100: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-school--first-next',
+      prevEl: '.swiper-school--first-prev',
+    },
+  });
+
   new Swiper('.content__slider-vertical', {
     slidesPerView: 1,
     // spaceBetween: 30,

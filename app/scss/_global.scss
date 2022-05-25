@@ -375,14 +375,41 @@ a:hover {
     max-width: 770px;
   }
 
+  &__image{
+    overflow: hidden;
+  }
+
+  &__image img{
+    transition: transform 500ms ease;
+  }
+
+  &__image img:hover{
+    transform: scale(1.05);
+  }
+
   &__slider-box {
     padding-bottom: 80px;
     position: relative;
   }
 
+  &__item-gallery img{
+    height: 470px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+  }
+  
+  &__item-vertical img{
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    transition: transform 500ms ease;
+  }
+
   &__item-gallery a,
   &__item-vertical a{
     position: relative;
+    overflow: hidden;
   }
 
   &__item-gallery a::before,
@@ -394,6 +421,7 @@ a:hover {
     top: 0;
     bottom: 0;
     opacity: 0;
+    z-index: 1;
     transition: opacity 500ms ease;
     background-color: rgba(0, 0, 0, 0.4);
   }
@@ -408,7 +436,12 @@ a:hover {
     color: #fff;
     font-size: 45px;
     opacity: 0;
+    z-index: 2;
     transition: top 500ms ease, opacity 500ms ease;
+  }
+
+  &__item-gallery:hover img{
+    transform: scale(1.05);
   }
 
   &__item-gallery a:hover::before,
@@ -424,10 +457,19 @@ a:hover {
 
   &__video-box{
     position: relative;
+    overflow: hidden;
   }
 
   &__video-box a{
     position: relative;
+  }
+
+  &__video-box a:hover img{
+    transform: scale(1.05);
+  }
+
+  &__video-box img{
+    transition: transform 500ms ease;
   }
 
   &__video-box a::before,
@@ -475,6 +517,10 @@ a:hover {
 
   &__item-vertical a + a{
     margin-left: 30px;
+  }
+
+  &__item-vertical a:hover img{
+    transform: scale(1.05);
   }
 
   &__text-row:not(:last-child){
@@ -675,84 +721,260 @@ a:hover {
     background-color: #323232;
   }
 
-  .swiper-navigation-content,
-  .swiper-navigation-vertical {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    max-width: 280px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .swiper-content-prev,
-  .swiper-content-next,
-  .swiper-vertical-prev,
-  .swiper-vertical-next {
-    border-right: 1px solid transparent;
-    padding: 20px 20px 20px 0;
-    transition: border-color 500ms ease;
-    position: relative;
-  }
-
-  .swiper-content-prev,
-  .swiper-vertical-prev {
-    border-left: 1px solid transparent;
-    border-right: none;
-    padding: 20px 0 20px 20px;
-  }
-
-  .swiper-content-prev:hover,
-  .swiper-content-next:hover,
-  .swiper-vertical-prev:hover,
-  .swiper-vertical-next:hover {
-    border-color: #000;
-  }
-
-  .swiper-content-prev::before,
-  .swiper-content-prev::after,
-  .swiper-content-next::before,
-  .swiper-content-next::after,
-  .swiper-vertical-prev::before,
-  .swiper-vertical-prev::after,
-  .swiper-vertical-next::before,
-  .swiper-vertical-next::after {
-    content: '';
-    position: absolute;
-    right: -1px;
-    bottom: -1px;
-    background-color: #000;
-    width: 50%;
-    height: 1px;
-    opacity: 0;
-    transition: opacity 500ms ease;
-  }
-
-  .swiper-content-prev::after,
-  .swiper-content-next::after,
-  .swiper-vertical-prev::after,
-  .swiper-vertical-next::after {
-    top: 0px;
-  }
-
-  .swiper-content-prev::after,
-  .swiper-content-prev::before,
-  .swiper-vertical-prev::after,
-  .swiper-vertical-prev::before {
-    left: -1px;
-  }
-
-  .swiper-content-prev:hover::before,
-  .swiper-content-prev:hover::after,
-  .swiper-content-next:hover::before,
-  .swiper-content-next:hover::after,
-  .swiper-vertical-prev:hover::before,
-  .swiper-vertical-prev:hover::after,
-  .swiper-vertical-next:hover::before,
-  .swiper-vertical-next:hover::after {
-    opacity: 1;
-  }
 }
+
+    .swiper-navigation-content,
+    .swiper-navigation-vertical {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      max-width: 280px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .swiper-content-prev,
+    .swiper-content-next,
+    .swiper-vertical-prev,
+    .swiper-vertical-next {
+      border-right: 1px solid transparent;
+      padding: 20px 20px 20px 0;
+      transition: border-color 500ms ease;
+      position: relative;
+    }
+  
+    .swiper-content-prev,
+    .swiper-vertical-prev {
+      border-left: 1px solid transparent;
+      border-right: none;
+      padding: 20px 0 20px 20px;
+    }
+  
+    .swiper-content-prev:hover,
+    .swiper-content-next:hover,
+    .swiper-vertical-prev:hover,
+    .swiper-vertical-next:hover {
+      border-color: #000;
+    }
+  
+    .swiper-content-prev::before,
+    .swiper-content-prev::after,
+    .swiper-content-next::before,
+    .swiper-content-next::after,
+    .swiper-vertical-prev::before,
+    .swiper-vertical-prev::after,
+    .swiper-vertical-next::before,
+    .swiper-vertical-next::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      bottom: -1px;
+      background-color: #000;
+      width: 50%;
+      height: 1px;
+      opacity: 0;
+      transition: opacity 500ms ease;
+    }
+  
+    .swiper-content-prev::after,
+    .swiper-content-next::after,
+    .swiper-vertical-prev::after,
+    .swiper-vertical-next::after {
+      top: 0px;
+    }
+  
+    .swiper-content-prev::after,
+    .swiper-content-prev::before,
+    .swiper-vertical-prev::after,
+    .swiper-vertical-prev::before {
+      left: -1px;
+    }
+  
+    .swiper-content-prev:hover::before,
+    .swiper-content-prev:hover::after,
+    .swiper-content-next:hover::before,
+    .swiper-content-next:hover::after,
+    .swiper-vertical-prev:hover::before,
+    .swiper-vertical-prev:hover::after,
+    .swiper-vertical-next:hover::before,
+    .swiper-vertical-next:hover::after {
+      opacity: 1;
+    }
+
+    .modal{
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-content{
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+    }
+
+    .modal-header{
+      padding: 0 0 70px 0;
+    }
+
+    .modal-body{
+      background-color: #e9e9e9;
+      padding: 40px 35px;
+    }
+
+    .modal-title{
+      @extend %futura-300;
+      text-transform: uppercase;
+      font-size: 40px;
+      color: #e9e9e9;
+    }
+
+    .modal-title br{
+      display: none;
+    }
+
+    .form__item{
+      margin-bottom: 35px;
+    }
+
+    .form-control{
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-left: 1px solid #000;
+      height: 55px;
+      border-radius: 0;
+      text-transform: uppercase;
+      @extend %futura-300;
+      color: #000;
+      font-size: 17px;
+      max-width: 275px;
+      padding: 20px 30px 20px 20px;
+      transition: background-color 500ms ease,
+      border-color 500ms ease;
+      cursor: pointer;
+    }
+
+    .form-group{
+      position: relative;
+      max-width: 275px;
+    }
+
+    .form-group::before{
+      content: '';
+      position: absolute;
+      right: 15px;
+      top: 20px;
+      z-index: 3;
+      background-image: url('../images/icons/arrow.svg');
+      width: 14px;
+      height: 12px;
+      transform: rotate(90deg);
+      opacity: 0;
+      transition: opacity 500ms ease;
+    }
+    
+    .form-group:hover::before{
+      opacity: 1;
+    }
+
+    .form-control::placeholder{
+      @extend %futura-300;
+      color: #000;
+      font-size: 17px;
+    }
+
+    .form-control:hover,
+    .form-control:focus{
+      background-color: #fff;
+      color: #000;
+      box-shadow: none;
+      border: 1px solid #000;
+    }
+
+    .form-group__input:hover::before,
+    .form-group__input:hover::after{
+      opacity: 0;
+    }
+
+    .form-control:hover::placeholder,
+    .form-control:focus::placeholder{
+      color: #000;
+    }
+
+    .form-group__input{
+      position: relative;
+    }
+
+    .form-group__input::before,
+    .form-group__input::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 1px;
+      width: 45px;
+      background-color: #000;
+      transition: opacity 500ms ease;
+    }
+
+    .form-group__input::before{
+      top: 0;
+    }
+
+    .form-group__input::after{
+      bottom: 0;
+    }
+
+    .custom-control{
+      margin-bottom: 55px;
+    }
+
+    .custom-control-label{
+      @extend %futura-300;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .custom-control-label a{
+      border-bottom: 1px solid #000;
+      transition: border-bottom-color 500ms ease;
+    }
+
+    .custom-control-label a:hover{
+      border-bottom-color: transparent;
+    }
+
+    .form__btn{
+      display: block;
+      margin: 0 auto;
+      max-width: 270px;
+      width: 100%;
+      height: 70px;
+      border-top: none;
+      border-bottom: none;
+      border-right: none;
+      @extend %futura-400;
+      font-size: 24px;
+      color: #000;
+      background-color: transparent;
+      transition: background-color 500ms ease;
+    }
+
+    .form__btn:hover{
+      background-color: #fff;
+      transform: scale(1);
+    }
+
+    .form__btn::before{
+      left: -1px;
+    }
+
+    .form__btn::before{
+      right: -1px;
+    }
+
+    .modal .close{
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }

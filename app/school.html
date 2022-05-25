@@ -12,13 +12,147 @@
 
 <body>
 
+
+  <div class="modal fade" id="feedbackFormModal" tabindex="-1" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">Заявка<br> на обучение</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="26" height="25" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_4100_6667)">
+                <path d="M21.5913 19.111L1.0332 0L0.000175827 1.11125L20.5583 20.2223L21.5913 19.111Z" fill="white" />
+                <path d="M0.000461507 19.111L20.5586 0L21.5916 1.11125L1.03349 20.2222L0.000461507 19.111Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_4100_6667">
+                  <rect width="22" height="20.4828" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container-fluid">
+
+            <!-- Форма обратной связи -->
+            <form id="feedbackForm">
+
+              <div class="form-row row">
+
+                <div class="form__item col-lg-4">
+                  <!-- Регион -->
+                  <div class="form-group">
+                    <!-- <label for="region" class="control-label">Ваш регион</label> -->
+                    <div class="form-group__input">
+                      <input id="region" type="text" name="region" required="required" class="form-control" value=""
+                        placeholder="Ваш регион">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="form__item col-lg-4">
+                  <!-- Город -->
+                  <div class="form-group">
+                    <!-- <label for="city" class="control-label">Ваш город</label> -->
+                    <div class="form-group__input">
+                      <input id="city" type="text" name="city" required="required" class="form-control" value=""
+                        placeholder="Ваш город">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="form__item col-lg-4">
+                  <!-- Номер телефона -->
+                  <div class="form-group">
+                    <!-- <label for="phone" class="control-label">Номер телефона</label> -->
+                    <div class="form-group__input">
+                      <input id="phone" type="tel" name="phone" required="required" class="form-control" value=""
+                        placeholder="Номер телефона">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="form__item col-lg-4">
+                  <!-- Имя родителя -->
+                  <div class="form-group">
+                    <!-- <label for="name-parent" class="control-label">Имя Родителя</label> -->
+                    <div class="form-group__input">
+                      <input id="name-parent" type="text" name="name-parent" class="form-control" value=""
+                        placeholder="Имя Родителя" minlength="2" maxlength="30" required="required">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="form__item col-lg-4">
+                  <!-- Имя ребенка -->
+                  <div class="form-group">
+                    <!-- <label for="name-child" class="control-label">Имя ребенка</label> -->
+                    <div class="form-group__input">
+                      <input id="name-child" type="text" name="name-child" required="required" class="form-control"
+                        value="" placeholder="Имя ребенка">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="form__item col-lg-4">
+                  <!-- Возраст ребенка -->
+                  <div class="form-group">
+                    <!-- <label for="age" class="control-label">Возраст ребенка</label> -->
+                    <div class="form-group__input">
+                      <input id="age" type="text" name="age" required="required" class="form-control" value=""
+                        placeholder="Возраст ребенка">
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Обработка персональных данных -->
+
+              <div class="custom-control row flex-column-reverse flex-lg-row">
+                <label class="custom-control-label col col-lg-8">
+                  Нажимая на кнопку Отправить, вы даете согласие на
+                  <a href="#" target="_blank">обработку персональных данных</a>
+                </label>
+                <label class="custom-control-label col col-lg-4">
+                  Ведется набор детей от 4-х лет.
+                </label>
+              </div>
+
+              <!-- Сообщение -->
+              <div class="alert alert-danger form-error d-none">
+                Произошли ошибки! Исправьте их и отправьте форму ещё раз.
+              </div>
+              <!-- Кнопка для отправки формы -->
+              <button type="submit" class="form__btn all-link">Отправить</button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Сообщение об успешной отправки формы -->
+        <div class="alert alert-success form-success mb-0 d-none">Форма успешно отправлена. Нажмите на <a
+            class="form-success-link" href="#">ссылку</a>, чтобы отправить ещё одно сообщение.</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
   <div class="menu-nav">
     <div class="menu-nav__box">
-  
+
       <nav class="header__nav navbar navbar-expand-lg">
-  
+
         <div class="header__content-box container justify-content-between">
-  
+
           <div class="header__nav-wrapper">
             <div class="container">
               <div class="header__nav-box">
@@ -26,7 +160,7 @@
                   <img class="header__logo-img--first" src="images/icons/logo-mini.png" alt="logo-mini icon">
                   <img class="header__logo-img" src="images/icons/logo-white.svg" alt="logo-white icon">
                 </a>
-  
+
                 <button class="header__menu-btn navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent-mobile">
                   <img class="header__menu-btn--first" src="images/icons/burger.svg" alt="burger menu">
@@ -35,10 +169,10 @@
               </div>
             </div>
           </div>
-  
+
           <div class="navbar-collapse collapse" id="navbarSupportedContent-mobile">
             <div class="container">
-  
+
               <div class="mobile-controll d-lg-none justify-content-end">
                 <div class="mobile-controll-close" id="closeBurger" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent-mobile">
@@ -57,9 +191,9 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="menu-nav__row row flex-column flex-lg-row">
-  
+
                 <ul class="header__list col flex-column flex-lg-row">
                   <li class="header__list-item header__list-item--active header__link-item--active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -84,7 +218,7 @@
                     <a href="contacts.html">CONTACTS</a>
                   </li>
                 </ul>
-  
+
                 <ul class="header__curse navbar-nav navbar-nav-right ml-auto mb-2 mb-lg-0 col">
                   <li class="header__curse-item">
                     <a class="header__curse-link" href="#">
@@ -97,7 +231,7 @@
                     </a>
                   </li>
                 </ul>
-  
+
                 <ul class="header-news__list d-block d-lg-none">
                   <li class="header-news__item">
                     <a class="header-news__link" href="#post.html">
@@ -125,25 +259,25 @@
                     </a>
                   </li>
                 </ul>
-  
+
               </div>
-  
+
             </div>
-  
+
           </div>
-  
+
         </div>
-  
+
       </nav>
-  
+
     </div>
   </div>
-  
+
   <header class="header" id="top">
-  
+
     <div class="header__top container-fluid">
       <div class="container">
-  
+
         <div class="header__top-row row">
           <ul class="header__country col col-sm-10">
             <li class="header__country-item header__country-item--active">
@@ -268,7 +402,7 @@
               </ul>
             </li>
           </ul>
-  
+
           <div class="header__profile-box col col-sm-2">
             <div class="header__profile">
               <a class="header__profile-item" href="#">
@@ -285,23 +419,23 @@
             </div>
           </div>
         </div>
-  
+
       </div>
     </div>
-  
+
     <nav class="header__nav navbar navbar-expand-lg navbar-light">
-  
+
       <div class="header__content-box container justify-content-between">
-  
+
         <a class="header__logo navbar-brand" href="#">
           <img src="images/icons/logo.svg" alt="logo">
         </a>
-  
+
         <button class="header__menu-btn navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent-mobile">
           <img src="images/icons/burger.svg" alt="burger menu">
         </button>
-  
+
         <div class="navbar-collapse collapse" id="navbarSupportedContent-mobile">
           <div class="container">
             <div class="mobile-controll d-lg-none justify-content-end">
@@ -309,7 +443,8 @@
                 data-bs-target="#navbarSupportedContent-mobile">
                 <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_4100_6667)">
-                    <path d="M21.5913 19.111L1.0332 0L0.000175827 1.11125L20.5583 20.2223L21.5913 19.111Z" fill="white" />
+                    <path d="M21.5913 19.111L1.0332 0L0.000175827 1.11125L20.5583 20.2223L21.5913 19.111Z"
+                      fill="white" />
                     <path d="M0.000461507 19.111L20.5586 0L21.5916 1.11125L1.03349 20.2222L0.000461507 19.111Z"
                       fill="white" />
                   </g>
@@ -321,13 +456,13 @@
                 </svg>
               </div>
             </div>
-  
+
             <div class="menu-nav__row row flex-column flex-lg-row">
-  
+
               <ul class="header__list col-lg-9 flex-column flex-lg-row">
                 <li class="header__list-item header__list-item--active header__link-item--active dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">ABOUT</a>
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">ABOUT</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">About the school</a>
                     <a class="dropdown-item" href="#">Charity foundation</a>
@@ -348,7 +483,7 @@
                   <a href="contacts.html">CONTACTS</a>
                 </li>
               </ul>
-  
+
               <ul class="header__curse navbar-nav col-lg-3 navbar-nav-right ml-auto mb-2 mb-lg-0">
                 <li class="header__curse-item">
                   <a class="header__curse-link" href="#">
@@ -361,7 +496,7 @@
                   </a>
                 </li>
               </ul>
-  
+
               <ul class="header-news__list d-block d-lg-none">
                 <li class="header-news__item">
                   <a class="header-news__link" href="#post.html">
@@ -389,30 +524,548 @@
                   </a>
                 </li>
               </ul>
-  
+
             </div>
-  
+
           </div>
-  
+
         </div>
       </div>
-  
+
     </nav>
-  
+
   </header>
 
   <main class="main">
 
+    <section class="school">
+
+      <div class="container">
+
+        <div class="school__title-box col">
+          <div class="school__title title">
+            <h2>
+              О МОДЕЛЬНОЙ ШКОЛЕ
+            </h2>
+          </div>
+        </div>
+
+        <div class="school__row-about row flex-column flex-lg-row justify-content-between">
+
+          <div class="school__text content__text-block col col-lg-4">
+            <h3>
+              Dolce Vita - крупнейшая международная
+              сеть модельно-актёрских школ,
+            </h3>
+            <p>
+              где основным направлением работы является раскрытие внутренней красоты ребёнка и создание условий для его
+              всестороннего
+              развития!
+            </p>
+            <p>
+              Мы делаем свою работу профессионально, шаг за шагом открывая для Вас мир моды и красоты.
+            </p>
+            <p>
+              Офисы нашей школы успешно работают в крупнейших городах России, США, Франции, Арабских эмират, Казахстана,
+              Беларуси, и
+              многих других стран!
+            </p>
+          </div>
+
+          <div class="school__image-box col col-lg-8">
+            <img class="col-4" src="images/content/school/1.png" alt="about image">
+          </div>
+        </div>
+
+        <div class="content__text-row content__text-row--three row">
+          <div class="content__text-block school__text-block col-12">
+            <h3>
+              Обучение в Dolce Vita - это:
+            </h3>
+          </div>
+
+          <div class="content__text-block school__text-block col-12 col-lg-5">
+            <p>
+              <span>1.</span>
+              Целый комплекс увлекательных и эффективных занятий,
+              который разработан с учётом возрастных особенностей
+              учеников.
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg-4">
+            <p>
+              <span>2.</span>
+              Профессиональные педагоги, имеющие профильное
+              образование и богатый опыт работы за плечами
+              (действующие актёры театра и кино, модели,
+              хореографы, фотографы, стилисты).
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg-3">
+            <p>
+              <span>3.</span>
+              Возможность в течение всей последующей жизни
+              участвовать в наших КАСТИНГАХ и принимать участие
+              в модных показах города, съёмках рекламы,
+              фотосессиях.
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg-5">
+            <p>
+              <span>4.</span>
+              Право посещать творческие встречи с известными
+              представителями мира кино, театра и шоу-бизнеса,
+              которые мы регулярно устраиваем для своих учеников/
+              выпускников.
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg-4">
+            <p>
+              <span>5.</span>
+              Новые знакомства и бесценный опыт, который
+              пригодится Вам в любой жизненной ситуации,
+              неважно будете ли Вы продолжать работать
+              в модной индустрии или нет.
+            </p>
+          </div>
+        </div>
+
+        <div class="content__row row flex-column flex-lg-row justify-content-between">
+
+          <div class="school__text content__text col col-lg-4">
+            <h3>
+              В 2020 году Dolce Vita запустила собственное онлайн-обучение,
+            </h3>
+            <p>
+              где занятия проводят лучшие педагоги Москвы и Санкт-Петербурга. Пользу нашего онлайн-курса сразу же
+              отметили родители
+              детей по всему миру!
+            </p>
+            <p>
+              Всё, что вам понадобится для эффективного обучения: старание, компьютер и интернет!
+            </p>
+          </div>
+
+          <div class="school__image-box--video content__image-box col col-lg-8">
+            <div class="school__video-box content__video-box">
+              <a data-fancybox href="https://youtu.be/CcSCXh3pAjE">
+                <img src="images/content/school/2.jpg" alt="school video preview">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__row content__row--gallery row justify-content-between">
+
+          <div class="content__text col col-lg-4">
+            <h3>
+              Dolce Vita регулярно устраивает творческие встречи для своих учеников с известными представителями мира
+              кино, театра и
+              шоу-бизнеса.
+            </h3>
+            <p>
+              Все подобные встречи - БЕСПЛАТНЫ для наших учеников и их родителей, даже после окончания обучения!
+            </p>
+            <p>
+              Наши ученики уже встретились вживую с такими известными личностями как Оксана Фёдорова, Егор Бероев,
+              Эвелина Блёданс,
+              Николай Валуев, Андрей Носков, Андрей Лебедев и др.
+            </p>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__slider-box">
+
+              <div class="school__slider--first swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-1" href="images/content/school/3.jpg">
+                      <img src="images/content/school/3.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-1" href="images/content/school/4.jpg">
+                      <img src="images/content/school/4.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-1" href="images/content/school/5.jpg">
+                      <img src="images/content/school/5.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-content">
+                <div class="swiper-school--first-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--first-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__row content__row--gallery row justify-content-between">
+
+          <div class="school__text content__text col col-lg-4">
+            <h3>
+              Dolce Vita является организатором Международного детского дня моды<br>
+              "DOLCE VITA BAMBINO FASHION DAY",
+            </h3>
+            <p>
+              который ежегодно собирает на одной площадке сотни юных моделей с разных уголков России и СНГ, талантливых
+              дизайнеров и
+              звёзд первой величины!
+            </p>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__slider-box">
+
+              <div class="school__slider--second swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-2" href="images/content/school/4.jpg">
+                      <img src="images/content/school/4.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-2" href="images/content/school/5.jpg">
+                      <img src="images/content/school/5.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-2" href="images/content/school/8.jpg">
+                      <img src="images/content/school/8.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-content">
+                <div class="swiper-school--second-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--second-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__row content__row--gallery row justify-content-between">
+
+          <div class="content__text col col-lg-4">
+            <h3>
+              В 2019 году Dolce Vita запустила собственное реалити-шоу "DOLCE VITA BATTLE"<br>
+              на телеканале "Теледом".
+            </h3>
+            <p>
+              Этот проект стал толчком для творческого развития у большого числа наших юных учеников, которые смогли
+              продемонстрировать свои таланты перед тысячами телезрителей и звёздным жюри!
+            </p>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__slider-box">
+
+              <div class="school__slider--third swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-3" href="images/content/school/5.jpg">
+                      <img src="images/content/school/5.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-3" href="images/content/school/8.jpg">
+                      <img src="images/content/school/8.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-3" href="images/content/school/4.jpg">
+                      <img src="images/content/school/4.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-content">
+                <div class="swiper-school--third-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--third-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__row content__row--vertical row justify-content-between">
+
+          <div class="school__text content__text col col-lg-4">
+            <h3>
+              Ежегодно Dolce Vita выпускает
+              собственный журнал "Dolce Vita Fashion",
+            </h3>
+            <p>
+              который объединяет на своих страницах самую интересную информацию из мира моды и красоты, фотографии наших
+              моделей из
+              разных городов, а также главные новости из жизни школы!
+            </p>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__vertical-box">
+
+              <div class="school__slider--fourth swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-vertical swiper-slide d-flex">
+                    <a data-fancybox="school-gallery-4" href="images/content/school/6.jpg">
+                      <img src="images/content/school/6.jpg" alt="content-page image">
+                    </a>
+                    <a data-fancybox="school-gallery-4" href="images/content/school/7.jpg">
+                      <img src="images/content/school/7.jpg" alt="content-page image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-vertical swiper-slide d-flex">
+                    <a data-fancybox="school-gallery-4" href="images/content/school/6.jpg">
+                      <img src="images/content/school/6.jpg" alt="content-page image">
+                    </a>
+                    <a data-fancybox="school-gallery-4" href="images/content/school/7.jpg">
+                      <img src="images/content/school/7.jpg" alt="content-page image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-vertical">
+                <div class="swiper-school--fourth-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--fourth-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="content__row content__row--gallery content__text-row--styles row justify-content-between">
+
+          <div class="content__text school__text-castings col col-lg-4">
+            <h3>
+              Dolce Vita приглашает пройти кастинг на обучение в модельно-актёрской школе детей от 4-х до 17-ти лет.
+            </h3>
+            <p>
+              Учиться в модельной школе никогда не поздно!<br>
+              Даже если Вам кажется, что Вы не обладаете модельными данными, это не является преградой для обучения.
+            </p>
+
+            <strong>
+              В школе Вас ждет обучение по следующим дисциплинам:
+            </strong>
+            <ul>
+              <li>- подиумный шаг;</li>
+              <li>- фотопозирование;</li>
+              <li>- актерское мастерство;</li>
+              <li>- сценическая речь;</li>
+              <li>- подиумная пластика;</li>
+              <li>- уроки визажа;</li>
+              <li>- уроки стиля;</li>
+              <li>- психология.</li>
+            </ul>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__slider-box">
+
+              <div class="school__slider--fifth swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-5" href="images/content/school/8.jpg">
+                      <img src="images/content/school/8.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-5" href="images/content/school/4.jpg">
+                      <img src="images/content/school/4.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-gallery swiper-slide">
+                    <a data-fancybox="school-gallery-5" href="images/content/school/3.jpg">
+                      <img src="images/content/school/3.jpg" alt="school gallery image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-content">
+                <div class="swiper-school--fifth-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--fifth-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="school__text-row--education content__text-row content__text-row--three row">
+
+          <div class="content__text-block school__text-block col-12 col-lg-5">
+            <p>
+              Обучение длится 4,5 месяца (2 занятия в неделю)
+              или 9 месяцев (по 1 занятию в неделю).
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg">
+            <p>
+              Каждый ученик примет участие в модном показе,
+              пройдется по подиуму, а также получит диплом<br>
+              об окончании школы. После обучения
+              мы продолжаем работать со своими моделями,
+              предоставляя возможность участия в различных
+              кастингах и мероприятиях города!
+            </p>
+          </div>
+          <div class="content__text-block school__text-block col-12 col-lg">
+            <p>
+              После окончания базового курса "Модель.
+              Фотомодель" в нашей школе, вы можете получить
+              приглашение продолжить увлекательное изучение
+              мира моды и красоты в нашем ПРОДЮСЕРСКОМ
+              ЦЕНТРЕ - DOLCE VITA PRODUCTION!
+            </p>
+          </div>
+        </div>
+
+        <div class="content__text-row row flex-column">
+          <div class="content__text-block col">
+            <h3>
+              Это проект, основная задача которого - дать максимум практики его участникам и способствовать продвижению
+              юных моделей!
+            </h3>
+          </div>
+
+          <div class="content__text-block school__text-btn col">
+            <button class="all-link school__btn" type="button" data-bs-toggle="modal"
+              data-bs-target="#feedbackFormModal">
+              заявка на обучение
+            </button>
+          </div>
+        </div>
+
+        <div class="content__row content__row--vertical school__row--vertical row justify-content-between">
+
+          <div class="content__text col col-lg-4">
+            <h3>
+              ОБУЧЕНИЕ - ЭТО ЛУЧШАЯ ИНВЕСТИЦИЯ!
+            </h3>
+            <p>
+              Наши сотрудники подробно расскажут о том, как и когда можно пройти вступительный кастинг, а также ответят
+              на все ваши
+              вопросы:
+            </p>
+            <strong>Телефоны:</strong>
+            <p>
+              <a class="line" href="tel:78127770470">+7 (812) 777-04-70;</a>
+              <a class="line" href="tel:78126550900">+7 (812) 655-09-00.</a>
+            </p>
+            <p>
+              Пн-Вс 13:00 - 19:00.
+            </p>
+            <strong>Мы в социальных сетях:</strong>
+            <p>
+              <a class="school__social-link" href="https://vk.com/dvmodel" target="_blank">vk.com/dvmodel</a>
+            </p>
+          </div>
+
+          <div class="content__image-box col col-lg-8">
+            <div class="content__vertical-box">
+
+              <div class="school__slider--sixth swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="content__item-vertical swiper-slide d-flex">
+                    <a data-fancybox="school-gallery-6" href="images/content/school/9.jpg">
+                      <img src="images/content/school/9.jpg" alt="content-page image">
+                    </a>
+                    <a data-fancybox="school-gallery-6" href="images/content/school/10.jpg">
+                      <img src="images/content/school/10.jpg" alt="content-page image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-vertical swiper-slide d-flex">
+                    <a data-fancybox="school-gallery-6" href="images/content/school/8.jpg">
+                      <img src="images/content/school/8.jpg" alt="content-page image">
+                    </a>
+                  </div>
+
+                  <div class="content__item-vertical swiper-slide d-flex">
+                    <a data-fancybox="school-gallery-6" href="images/content/content-page/1.jpg">
+                      <img src="images/content/content-page/1.jpg" alt="content-page image">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-navigation-vertical">
+                <div class="swiper-school--sixth-prev">
+                  <img src="images/icons/arrow-left.svg" alt="slide arrow">
+                </div>
+                <div class="swiper-school--sixth-next">
+                  <img src="images/icons/arrow-right.svg" alt="slide arrow">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
 
   <footer class="footer">
-  
+
     <div class="container">
-  
+
       <div class="footer__inner">
-  
+
         <ul class="footer__list row">
           <li class="footer__item footer__item-copy col-6 col-lg-2">
             © ООО "ДОЛЬЧЕ ВИТА" 2022
@@ -439,11 +1092,11 @@
             </a>
           </li>
         </ul>
-  
+
       </div>
-  
+
     </div>
-  
+
   </footer>
 
 
